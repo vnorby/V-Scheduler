@@ -15,12 +15,12 @@ Example use cases include:
 2. Download `background_job.rb` and place it in your `/app/jobs` folder where you store other Resque background jobs.
 3. Somewhere in your application that is hit often enough, place `VScheduler.run` For example, to run it on every page load:
 
->    class ApplicationController < ActionController::Base
->        before_filter :run_v_scheduler
->        def run_v_scheduler
->            VScheduler.run
->        end
->    end
+        class ApplicationController < ActionController::Base
+            before_filter :run_v_scheduler
+            def run_v_scheduler
+                VScheduler.run
+            end
+         end
 
 **Here's how to schedule tasks:**
 

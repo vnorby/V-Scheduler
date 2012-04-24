@@ -16,12 +16,12 @@ Example use cases include:
 3. Somewhere in your application that is hit often enough, place `VScheduler.run` For example, to run it on every page load:
 
 ```ruby
-        class ApplicationController < ActionController::Base
-            before_filter :run_v_scheduler
-            def run_v_scheduler
-                VScheduler.run
-            end
-         end
+class ApplicationController < ActionController::Base
+  before_filter :run_v_scheduler
+  def run_v_scheduler
+    VScheduler.run
+  end
+end
 ```
 
 **Here's how to schedule tasks:**
@@ -29,13 +29,13 @@ Example use cases include:
 This code:
 
 ```ruby
-    VScheduler.schedule(5.minutes, "User", "send_welcome", 1)
+VScheduler.schedule(5.minutes, "User", "send_welcome", 1)
 ```
 
 Will execute the following in 5 minutes:
 
 ```ruby
-    User.find_by_id(1).send_welcome
+User.find_by_id(1).send_welcome
 ```
 
 It's that simple!

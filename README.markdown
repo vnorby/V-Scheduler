@@ -11,7 +11,7 @@ Example use cases include:
 
 **Here's how to get started:**
 
-1. Download `v_scheduler.rb` and drop it in the folder where you store other modules. `/app/helpers` is a good place for it.
+1. Download `v_scheduler.rb` and drop it in the folder where you store other modules. `/app/lib` is a good place for it.
 2. Download `background_job.rb` and place it in your `/app/jobs` folder where you store other Resque background jobs.
 3. Somewhere in your application that is hit often enough, place `VScheduler.run` For example, to run it on every page load:
 
